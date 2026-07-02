@@ -1,6 +1,8 @@
 <div class="rifa-container">
+  <img src="/cabecalho.png" alt="Rifa Online" width="100%" height="auto" class="cabecalho-imagem">
+  
   <header>
-    <h1>Rifa Online</h1>
+    <!-- <h1>Rifa Online</h1> -->
     <p>Escolha seus números da sorte de 1 a 200 clicando na cartela abaixo:</p>
   </header>
 
@@ -18,6 +20,9 @@
     <p><strong>Números Selecionados:</strong> {{ numerosFormatados || 'Nenhum número selecionado' }}</p>
     <button class="btn-comprar" (click)="abrirCompra()">Comprar Agora</button>
   </div>
+
+  <img src="/rodape.png" alt="Rifa Online" width="100%" height="auto" class="rodape-imagem">
+  
 </div>
 
 <div class="modal-overlay" *ngIf="exibirModal">
@@ -55,4 +60,7 @@
       <button class="btn-concluir" (click)="fecharModal()">Concluir e Fechar</button>
     </div>
   </div>
+
+  
+
 </div>
