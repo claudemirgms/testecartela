@@ -1,0 +1,176 @@
+.rifa-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+header h1 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Construção da grade adaptável para os 200 números */
+.grade-numeros {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.grade-numeros button {
+  padding: 15px 5px;
+  font-size: 16px;
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: #444;
+}
+
+.grade-numeros button:hover {
+  border-color: #007bff;
+  background-color: #f8f9fa;
+}
+
+/* ESTADO EM DESTAQUE: Quando o número está selecionado */
+.grade-numeros button.destacado {
+  background-color: #28a745;
+  border-color: #1e7e34;
+  color: #ffffff;
+  font-weight: bold;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.painel-compra {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  padding: 15px 20px;
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.btn-comprar {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* EFEITO ESCURO DO POP-UP */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* CAIXA DO POP-UP */
+.modal-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+}
+
+.btn-fechar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+}
+
+.badge-numeros {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 15px 0 25px 0;
+  font-size: 15px;
+}
+
+.campo-grupo {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.campo-grupo label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.campo-grupo input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.btn-finalizar, .btn-concluir {
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tela-pix {
+  text-align: center;
+}
+
+.wrapper-qrcode {
+  margin: 20px 0;
+}
+
+.wrapper-qrcode img {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.alerta-pagamento {
+  color: #dc3545;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
