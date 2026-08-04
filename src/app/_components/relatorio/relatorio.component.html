@@ -1,0 +1,38 @@
+<div class="relatorio-container">
+  <h2>Relatório de Contatos</h2>
+  <h4>Total Registros: {{totalRegistros()}} | Total Pago: {{totalNumerosPago() * valorUnitario()  | currency:'BRL':'symbol' }}</h4>
+  <table class="tabela-relatorio">
+    <thead>
+      <tr>
+        <th>Número</th>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Status</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+    @for (ticket of tickets; track ticket.number){
+      <tr>
+        <td>{{ ticket.number }}</td>
+        <td>{{ ticket.nome }}</td>
+        <td>{{ ticket.phone }}</td>
+        <td>
+          <span [class]="'status-' + ticket.status.toLowerCase()">
+            {{ ticket.status }}
+          </span>
+        </td>
+        <td>
+          @if(ticket.status == "em-analise") {
+          <button class="btn btn-secundary" (click)="updateStatus(ticket.number)">Confirmar pagamento</button>
+          }
+        </td>
+      </tr>
+    
+    }@empty {
+        <p>Nenhuma registro encontrada</p>
+    }      
+      
+    </tbody>
+  </table>
+</div>

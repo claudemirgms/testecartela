@@ -1,0 +1,19 @@
+<dialog #dialogElement class="modal-box">
+  <div class="modal-header">
+    <h2>User Profile Information</h2>
+    <button class="close-btn" (click)="close()">&times;</button>
+  </div>
+  
+  <div class="modal-body" *ngIf="user">
+    <div class="profile-card">
+      <p><strong>Name:</strong> {{ user.name }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Role:</strong> {{ user.role }}</p>
+      <p><strong>Status:</strong> {{ user.status }}</p>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn-secondary" (click)="close()">Close</button>
+  </div>
+</dialog>

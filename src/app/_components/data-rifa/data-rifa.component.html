@@ -1,0 +1,26 @@
+<div class="container">
+    
+    <label [hidden]="true">Total de Rifas: {{ numeroRifas() }}</label>
+
+    @for (rifa of dados; track rifa._id){
+        
+        <div class="pai">
+            <div class="filho">
+                <img [src]="rifa.img" [alt]="rifa.src" class="img-premio">
+            </div>
+            <div class="filho">
+                <div class="fw-bold text-primary">Nome Rifa: {{rifa.name}}</div>
+                <div class="text-muted">Descrição: {{rifa.description}}</div>
+                <div class="text-muted">Total Numeros: {{rifa.totalNumbers}}</div>
+                <div class="text-muted">Valor Unitário: {{rifa.unitValue}}</div>
+            </div>
+            <div class="filho">
+                <p><a [href]="[ `/cartela?id=${rifa.id}` ]" routerLinkActive="active" title="Clique para acessar link rifa">Link rifa</a></p>
+                <p><a [href]="[ `/rifa/${rifa.id}/tickets` ]" routerLinkActive="active" title="Clique para verificar numeros da rifa">Números comprados</a></p>
+            </div>            
+        </div>        
+    
+    }@empty {
+        <p>Nenhuma rifa encontrada</p>
+    }
+</div>

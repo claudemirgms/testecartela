@@ -1,0 +1,21 @@
+<dialog #dialogElement class="modal-box">  
+  <div class="modal-header">
+    <h2>Atenção!</h2>
+    <button class="close-btn" (click)="close()">&times;</button>
+  </div>
+
+  <div class="modal-body" *ngIf="numerosComprados && numerosComprados.length > 0">
+    <div class="profile-card">
+      <p><strong>Você comprou o(s) seguinte(s) número(s):</strong></p>
+      <p>{{ numerosComprados }}</p>
+      <P>Estes numero ficaram reservados para você até a verificação do pagamento</P>
+      <p><strong>Valor Total:</strong> {{ valorTotal | currency:'BRL':'symbol' }}</p>
+      <p>Favor efetuar o pagamento e enviar o comprovante de pagamento.</p>
+      <p>Obrigado pela sua compra!</p>
+    </div>    
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn-secondary" (click)="close()">Fechar</button>
+  </div>
+</dialog>

@@ -1,0 +1,24 @@
+.relatorio-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.tabela-relatorio {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.tabela-relatorio th, .tabela-relatorio td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabela-relatorio th {
+  background-color: #f4f4f4;
+}
+
+.status-ativo { color: green; font-weight: bold; }
+.status-em-analise { color: orange; font-weight: bold; }
+.status-comprado { color: red; font-weight: bold; }

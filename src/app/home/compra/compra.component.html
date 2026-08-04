@@ -1,0 +1,31 @@
+<div class="container">
+      <h2>Finalizar Reserva</h2>
+      
+      <div class="resumo">
+        <label><strong>Números Selecionados:</strong></label>
+        <p class="numeros-badge">{{ rifaService.numerosSelecionados.join(', ') }}</p>
+      </div>
+
+      <form (ngSubmit)="finalizarCompra()" #formCompra="ngForm" class="formulario">
+        <div class="campo">
+          <label>Nome Completo:</label>
+          <input type="text" [(ngModel)]="rifaService.dadosComprador.nome" name="nome" required #nome="ngModel">
+        </div>
+
+        <div class="campo">
+          <label>Telefone:</label>
+          <input type="tel" [(ngModel)]="rifaService.dadosComprador.telefone" name="telefone" required #tel="ngModel">
+        </div>
+
+        <button type="submit" class="btn-finalizar" [disabled]="!formCompra.valid">
+          Finalizar Compra
+        </button>
+      </form>
+    </div>
+<!-- Modal component initialized dynamically with template reference variable -->
+<app-compra-modal 
+  #compraModal 
+  [numerosComprados]="rifaService.numerosSelecionados.join(', ') " 
+  [idRifa]="rifaId"
+  (closeModal)="clearSelection()">
+</app-compra-modal>

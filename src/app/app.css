@@ -51,6 +51,25 @@ header p {
   box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
 }
 
+.grade-numeros button.analise {
+  background-color: #f8f8f8;
+  border-color: #f0f0f0;
+  color: #d0d0d0;
+  
+  transform: scale(1.05);
+  
+  cursor: default;
+}
+
+.grade-numeros button.comprado {
+  background-color: #f8f8f8;
+  border-color: #f0f0f0;
+  color: #d0d0d0;
+  font-weight: bold;
+  padding: 5px 5px;
+  cursor: default;
+}
+
 .painel-compra {
   position: fixed;
   bottom: 0;
@@ -174,4 +193,33 @@ header p {
   color: #dc3545;
   font-size: 13px;
   margin-bottom: 20px;
+}
+
+
+/* Container principal */
+.container-mensagem {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  
+}
+
+/* O bloco de mensagem (escondido por padrão) */
+.bloco-mensagem {
+  display: none; /* Oculta o elemento */
+  position: absolute;
+  top: 100%; /* Posiciona abaixo do texto */
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+  z-index: 100;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Mostra a mensagem ao passar o mouse */
+.container-mensagem:hover .bloco-mensagem {
+  display: block; /* Exibe o elemento */
 }

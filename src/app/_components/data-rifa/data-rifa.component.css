@@ -1,0 +1,39 @@
+a{
+    text-decoration: none;
+    /* color: inherit; */
+}
+
+.img-premio {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.container{
+    text-decoration: none;
+    width: 650px;
+    height: auto;    
+} 
+
+
+.card{
+    display: flex; 
+    align-items: left; 
+    justify-content: space-between;
+}
+
+.pai {
+  display: flex; /* Deixa os filhos lado a lado */
+  gap: 20px;    /* Espaço entre as divs */
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 180px;    
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.filho {
+  display: inline-block;
+  width: 40%;
+  overflow: hidden;
+}
